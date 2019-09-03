@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-class Home extends Component {
-    constructor(props) {
+class Home extends React.Component {
+    constructor(props: Readonly<{}>) {
         super(props);
         this.state = {  };
     }
-    render() {
+    public  render() {
         return (
             <div>
                 Home
