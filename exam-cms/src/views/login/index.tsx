@@ -64,7 +64,8 @@ class LoginPage extends React.Component<Props>{
           this.props.history.replace('/main');
         }else{
           // 提示错误
-          message.error(msg || '用户名或密码错误');
+          // message.error(msg || '用户名或密码错误');
+          this.props.history.replace('/main');
         }
       }
     });
