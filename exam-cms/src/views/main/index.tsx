@@ -1,10 +1,12 @@
 import * as React from 'react';
 import {Layout, Avatar, Menu, Icon, Button} from 'antd';
 import {observer, inject} from 'mobx-react';
+import RouterView from '../../router/RouterView'
 import 'antd/dist/antd.css'
 import './index.css'
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
+
 
 @inject('question')
 @observer
@@ -12,6 +14,7 @@ class LoginPage extends React.Component{
     constructor(props: any){
         super(props);
         const {getQuestion} = props.question;
+        console.log('props.............router',props)
         getQuestion();
     }
     state = {
@@ -94,7 +97,9 @@ class LoginPage extends React.Component{
 
                 </Sider>
                 
-                <Content>333</Content>
+                <Content>
+                    {/* <RouterView routes={this.props.children}/> */}
+                </Content>
             </Layout>
         </Layout>
     }
