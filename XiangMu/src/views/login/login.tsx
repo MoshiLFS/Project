@@ -55,14 +55,14 @@ class Login extends React.Component<UserFormProps, any> {
             valuePropName: 'checked'
             
           })( <Checkbox>记住密码</Checkbox>)}
-         
           <a className="login-form-forgot" href="">
            忘记密码
           </a>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+         <div className='div1'>
+         <Button type="primary" htmlType="submit" className="login-form-button">
             登陆
           </Button>
-        
+         </div>
         </Form.Item>
       </Form>
         </div>

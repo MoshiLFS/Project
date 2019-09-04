@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Icon,Menu,  Switch } from 'antd';
+import { Icon,Menu} from 'antd';
 
 const { SubMenu } = Menu;
 
@@ -27,14 +27,7 @@ class Home extends React.Component {
   public render() {
     return (
       <div>
-        <Switch
-          checked={this.state.theme === 'dark'}
-          onChange={this.changeTheme}
-          checkedChildren="Dark"
-          unCheckedChildren="Light"
-        />
-        <br />
-        <br />
+      
         <Menu
         //   theme={this.state.theme}
           onClick={this.handleClick}
