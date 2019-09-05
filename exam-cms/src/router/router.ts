@@ -30,6 +30,6 @@ export default {
         component: Login
     },{
         path : '/',
-        redirect : '/ligin'
+        redirect : '/login'
     }]
 }
