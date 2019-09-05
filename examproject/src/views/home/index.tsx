@@ -11,6 +11,7 @@ const { Header, Content, Sider } = Layout;
 interface Props{
     path:any
 }
+
 class Home extends React.Component<Props> {
     state = {
     collapsed: false
@@ -20,7 +21,7 @@ class Home extends React.Component<Props> {
             collapsed: !this.state.collapsed,
         });
     };
-    public  render() {
+    public render() {
         console.log(this.props.path)
         return (
            

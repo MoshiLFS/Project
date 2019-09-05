@@ -21,6 +21,7 @@ class Login extends React.Component<Props> {
             if (!err) {
                 console.log('Received values of form: ', values);
                 const {code,msg}=await this.props.user.login(values);
+                // console.log(code, msg)//Chenmanjie123!
                 //跳转路由
                 if(code===1){
                     console.log('111')

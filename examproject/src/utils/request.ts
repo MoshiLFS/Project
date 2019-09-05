@@ -1,11 +1,14 @@
 import axios from "axios";
 import { AxiosResponse } from "axios/index";
-import { HttpInfo } from '../types/index'
+import { HttpInfo } from '../types/index';
+import { getToken } from './index';
+import { message } from 'antd'
 
 
 const instance = axios.create({
     baseURL: 'http://169.254.32.138:7001',
     timeout: 1000,
+    headers: { 'authorization': getToken() }
     // headers: {'X-Custom-Header': 'foobar'}
 });
 
@@ -22,9 +25,15 @@ instance.interceptors.request.use((config) => {
 // 响应拦截器
 instance.interceptors.response.use((response: AxiosResponse<any>) => {
     // Do something with response data
+    if (response.status !== 200) {
+        message.error(response.statusText)
+    }
     return response.data;
 }, (error) => {
     // Do something with response error
+        // if (error.response.status && error.response.status !== 200) {
+        //     message.error(error.response.statusText)
+        // }
     return Promise.reject(error);
 }
 );
