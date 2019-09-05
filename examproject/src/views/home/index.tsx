@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { Menu, Icon, Button, Layout, Switch,Table } from 'antd';
+import { NavLink} from 'react-router-dom';
+import Routerview from "../../routes/routerview";
+import "./index.css";
 const { SubMenu } = Menu;
 
 
 const { Header, Content, Sider } = Layout;
-class Home extends React.Component {
+
+interface Props{
+    path:any
+}
+class Home extends React.Component<Props> {
     state = {
     collapsed: false
 };   
@@ -13,20 +20,17 @@ class Home extends React.Component {
             collapsed: !this.state.collapsed,
         });
     };
-
     public  render() {
+        console.log(this.props.path)
         return (
            
                 <Layout>
                     <Header>
-                        <p className="school">八维研修学院</p>
+                    <div className="imgs"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551624718911&di=4a7004f8d71bd8da84d4eadf1b59e689&imgtype=0&src=http%3A%2F%2Fimg105.job1001.com%2Fupload%2Falbum%2F2014-10-15%2F1413365052_95IE3msH.jpg" alt=""/></div>
                     </Header>
                     <Layout>
                         <Sider>
-                        <div style={{ width: 256 }}>
-                            {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-                                <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-                            </Button> */}
+                        <div>
                             <Menu
                                 defaultSelectedKeys={['1']}
                                 defaultOpenKeys={['sub1']}
@@ -34,18 +38,6 @@ class Home extends React.Component {
                                 theme="dark"
                                 inlineCollapsed={this.state.collapsed}
                             >
-                                {/* <Menu.Item key="1">
-                                    <Icon type="pie-chart" />
-                                    <span>Option 1</span>
-                                </Menu.Item>
-                                <Menu.Item key="2">
-                                    <Icon type="desktop" />
-                                    <span>Option 2</span>
-                                </Menu.Item>
-                                <Menu.Item key="3">
-                                    <Icon type="inbox" />
-                                    <span>Option 3</span>
-                                </Menu.Item> */}
                                 <SubMenu
                                     key="sub1"
                                     title={
@@ -55,10 +47,9 @@ class Home extends React.Component {
                                         </span>
                                     }
                                 >
-                                    <Menu.Item key="5">添加试题</Menu.Item>
-                                    <Menu.Item key="6">试题分类</Menu.Item>
-                                    <Menu.Item key="7">查看试题</Menu.Item>
-                                    {/* <Menu.Item key="8">Option 8</Menu.Item> */}
+                                    <Menu.Item key="5"><NavLink to="/home/add">添加试题</NavLink></Menu.Item>
+                                    <Menu.Item key="6"><NavLink to="/home/rank">试题分类</NavLink></Menu.Item>
+                                    <Menu.Item key="7"><NavLink to="/home/check">查看试题</NavLink></Menu.Item>
                                 </SubMenu>
                                 <SubMenu
                                     key="sub2"
@@ -95,7 +86,9 @@ class Home extends React.Component {
                             </Menu>
                         </div>
                         </Sider>
-                        <Content></Content>
+                        <Content>
+                            <Routerview routes={this.props.path}></Routerview>
+                        </Content>
                     </Layout>
                 </Layout>
            
