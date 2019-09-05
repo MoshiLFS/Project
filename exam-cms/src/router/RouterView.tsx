@@ -5,10 +5,10 @@ interface PropsInfo {
     routes: Array<any>
 }
 export default (props: PropsInfo)=>{
-    console.log('props...', props);
+    // console.log('props...', props);
     const routeArr = props.routes.filter(item=> item.component);
     const redirectArr = props.routes.filter(item => item.redirect).map((item,index)=> <Redirect from={item.path} key={index} to={item.redirect}/>)
-    console.log('redirectArr.......',redirectArr)
+    // console.log('redirectArr.......',redirectArr)
     return <Switch>
         {
             // props.routes.map((item: any, index)=>{
