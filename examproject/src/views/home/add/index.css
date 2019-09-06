@@ -1,0 +1,10 @@
+.main{width:100%;height:100%;padding:0 24px 0 24px;display:flex;flex-direction:column;}
+.main>.ant-layout-content{padding:0 24px 0 24px;}
+form.ant-form{flex:1;}
+.ant-form{flex:1;}
+h2{padding: 20px 0;}
+
+.mainBox{display:flex;flex-direction:column;background:#fff;border-radius:10px;height:2000px;}
+.center{padding:24px 0 24px 0;flex:1;}
+form.ant-form-inline{padding-bottom:38px;}
+button{-webkit-linear-gradient:(-90deg,#4e75ff, #0139fd)!important;}

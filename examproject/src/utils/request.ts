@@ -6,7 +6,7 @@ import { message } from 'antd'
 
 
 const instance = axios.create({
-    baseURL: 'http://169.254.201.205:7001',
+    baseURL: 'http://localhost:7001',
     timeout: 1000,
     headers: { 'authorization': getToken() }
     // headers: {'X-Custom-Header': 'foobar'}
