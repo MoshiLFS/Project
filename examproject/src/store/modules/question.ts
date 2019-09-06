@@ -3,9 +3,9 @@ import {getQuestion} from '../../service/index'
 
 class Question{
     // 按条件获取试题
-    @action async getQuestion(params: any): Promise<any>{
-        console.log(params)//undefined
-        let result: any = await getQuestion(params);
+    @action async getQuestion(): Promise<any>{
+        let result: any = await getQuestion();
+        return result;
         console.log('question...', result);
     }
 }

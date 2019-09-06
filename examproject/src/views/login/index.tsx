@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { WrappedFormUtils } from "antd/lib/form/Form";
 import { History } from "history/index";
+import { setToken } from "../../utils/index";
 import "./index.css";
 import { inject,observer } from 'mobx-react';
 
@@ -24,7 +25,7 @@ class Login extends React.Component<Props> {
                 // console.log(code, msg)//Chenmanjie123!
                 //跳转路由
                 if(code===1){
-                    console.log('111')
+                    // setToken('key','authorization')
                     this.props.history.push('/home');
                 }else{
                     message.error(msg || '用户名或密码错误');
@@ -35,6 +36,7 @@ class Login extends React.Component<Props> {
 
     render() {
         const { getFieldDecorator } = this.props.form;
+        const { user_name, user_pwd } = this.props.user.account;
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
                 {/* <span>{this.props.user.isLogin ? 'true' : 'false'}</span> */}
@@ -42,6 +44,7 @@ class Login extends React.Component<Props> {
                 <Form.Item>
                     {getFieldDecorator('user_name', {
                         validateTrigger: 'onBlur',
+                        initialValue: user_name,
                         rules: [
                             // { required: true, message: 'Please input your username!' }
                             {
@@ -65,6 +68,7 @@ class Login extends React.Component<Props> {
                 <Form.Item>
                     {getFieldDecorator('user_pwd', {
                         validateTrigger: 'onBlur',
+                        initialValue: user_pwd,
                         rules: [
                             // { required: true, message: 'Please input your Password!' }
                             {
@@ -91,13 +95,19 @@ class Login extends React.Component<Props> {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>记住密码</Checkbox>)}
+                </Form.Item>
+                <Form.Item>
+                    {getFieldDecorator('autoLogin', {
+                        valuePropName: 'checked',
+                        initialValue: true,
+                    })(<Checkbox>Auto login in 7 days</Checkbox>)}
                     <a className="login-form-forgot" href="">
                         忘记密码
           </a>
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         登录
           </Button>
-                     <a href="">去注册!</a>
+                    <a href="">去注册!</a>
                 </Form.Item>
             </Form>
         );

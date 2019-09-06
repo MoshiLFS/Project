@@ -2,6 +2,7 @@
 import User from "./modules/user";
 import Question from "./modules/question";
 
+
 //实例化模块
 
 const user = new User();

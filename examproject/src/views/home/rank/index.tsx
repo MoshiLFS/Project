@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Table } from 'antd';
+// import question from "../../../store/index";
 import "./index.css";
 
-import { inject, observer } from 'mobx-react';
+// import { inject, observer } from 'mobx-react';
 const columns = [
     {
         title: 'Name',
@@ -37,39 +38,40 @@ const data = [
         address: 'Sidney No. 1 Lake Park',
     },
 ];
-interface Props {
-    question: any,
-    result: any
-}
+// interface Props {
+//     question: any,
+//     result: any
+// }
 // interface Props {
 //     path: any
 // }
 
-@inject('question')
-@observer
-class Rank extends React.Component<Props> {
-    constructor(props: any) {
-        super(props)
-        this.getList()
-    }
-    public state = {
-        list: []
-    }
-    public componentDidMount() {
-        this.getList()
-    }
-    public getList = async () => {
-        const { getQuestion } = this.props.question
-        getQuestion()
-        const result = await this.props.question.getQuestion()
-        this.setState({
-            list: result
-        })
-    }
+// @inject('question')
+// @observer
+class Rank extends React.Component {
+    // constructor(props: any) {
+    //     super(props)
+    //     this.getList()
+    // }
+    //  state = {
+    //     list: []
+    // }
+//   componentDidMount() {
+//         this.getList()
+//     }
+//     getList = async () => {
+//         // console.log(this.props.question)
+//         //  const { getQuestion } = this.props.question
+//         // getQuestion()
+//         const result = await this.props.question.getQuestion()
+//         this.setState({
+//             list: result.data
+//         })
+//     }
 
-    public render() {
-        const {list} =this.state;
-        console.log(list)
+   render() {
+    //    const {list} =this.state;
+    //     console.log(list)
         return (
             <div>
                 <Table columns={columns} dataSource={data} size="middle" />
@@ -79,5 +81,4 @@ class Rank extends React.Component<Props> {
         )
     }
 }
-
-export default Rank;
+ export default Rank;
