@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { WrappedFormUtils } from "antd/lib/form/Form";
 import { History } from "history/index";
+import { setToken } from "../../utils/index";
 import "./index.css";
 import { inject, observer } from 'mobx-react';
 
