@@ -10,3 +10,12 @@ export let getQuestion = (params: object) => {
 export let addQuestion = (params: any) => {
     return request.get('/exam/questions/new', { params });
 }
+
+//获取全部教室号
+export let getAllClass = () => {
+    return request.get('/manger/room');
+}
+//获取全部班级名
+export let getAllClassName = () => {
+    return request.get('/manger/grade');
+}

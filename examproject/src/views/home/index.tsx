@@ -61,32 +61,13 @@ class Home extends React.Component<Props> {
                                     title={
                                         <span>
                                             <Icon type="appstore" />
-                                            <span>Navigation Two</span>
+                                            <span>班级管理</span>
                                         </span>
                                     }
                                 >
-                                    <Menu.Item key="9">Option 9</Menu.Item>
-                                    <Menu.Item key="10">Option 10</Menu.Item>
-                                    <SubMenu key="sub3" title="Submenu">
-                                        <Menu.Item key="11">Option 11</Menu.Item>
-                                        <Menu.Item key="12">Option 12</Menu.Item>
-                                    </SubMenu>
-                                </SubMenu>
-                                <SubMenu
-                                    key="sub3"
-                                    title={
-                                        <span>
-                                            <Icon type="appstore" />
-                                            <span>Navigation Three</span>
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="9">Option 13</Menu.Item>
-                                    <Menu.Item key="10">Option 14</Menu.Item>
-                                    <SubMenu key="sub3" title="Submenu">
-                                        <Menu.Item key="11">Option 15</Menu.Item>
-                                        <Menu.Item key="12">Option 16</Menu.Item>
-                                    </SubMenu>
+                                    <Menu.Item key="9" ><NavLink to="/home/classroom">班级管理</NavLink></Menu.Item>
+                                    <Menu.Item key="10"><NavLink to="/home/classroom">教室管理</NavLink></Menu.Item>
+                                    <Menu.Item key="11"><NavLink to="/home/studentRoom">学生管理</NavLink></Menu.Item>
                                 </SubMenu>
                             </Menu>
                         </div>

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Form, Icon, Input, Button, Layout } from 'antd';
-import Edit from '../../../component/component/editComponent'
+import Edit from '../../../../component/component/editComponent'
 import './index.css';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-import { addQuestion } from '../../../service/question'
+import { addQuestion } from '../../../../service/question'
 
 interface Props {
     form: any,
