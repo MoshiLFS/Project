@@ -23,10 +23,6 @@ class Home extends React.Component<Props> {
         });
     };
     public render() {
-<<<<<<< HEAD
-=======
-        console.log(this.props.path)
->>>>>>> 6ebd4bb1571a63f79bfac9501e2e7659033756e6
         return (
            
                 <Layout>

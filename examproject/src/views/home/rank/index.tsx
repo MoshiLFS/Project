@@ -1,16 +1,12 @@
 import * as React from 'react';
 import { Table } from 'antd';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import { DndProvider, DragSource, DropTarget } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
-=======
-// import question from "../../../store/index";
->>>>>>> 6ebd4bb1571a63f79bfac9501e2e7659033756e6
 import "./index.css";
 
-import { inject, observer } from 'mobx-react';
+// import { inject, observer } from 'mobx-react';
 const columns = [
     {
         title: '类型ID',
@@ -31,8 +27,8 @@ interface Props {
     result: any
 }
 
-@inject('getQuestionsType')
-@observer
+// @inject('getQuestionsType')
+// @observer
 class Rank extends React.Component<Props>{
      state = {
         list: []
@@ -47,7 +43,7 @@ class Rank extends React.Component<Props>{
         })
     }
 
-   render() {
+  public render() {
        const {list} =this.state;
         console.log(list)
         const data = list.map((item:any,index)=>{
@@ -69,94 +65,4 @@ class Rank extends React.Component<Props>{
         )
     }
 }
-<<<<<<< HEAD
 export default Rank;
-
-
-=======
-import "./index.css";
-
-import { inject, observer } from 'mobx-react';
-const columns = [
-    {
-        title: 'Name',
-        dataIndex: 'name',
-    },
-    {
-        title: 'Age',
-        dataIndex: 'age',
-    },
-    {
-        title: 'Address',
-        dataIndex: 'address',
-    },
-];
-const data = [
-    {
-        key: '1',
-        name: 'John Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
-    },
-    {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
-    },
-    {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-    },
-];
-interface Props {
-    question: any,
-    result: any
-}
-// interface Props {
-//     path: any
-// }
-
-@inject('question')
-@observer
-class Rank extends React.Component<Props> {
-    // constructor(props: any) {
-    //     super(props)
-    //     this.getList()
-    // }
-    public state = {
-        list: []
-    }
-    public componentDidMount() {
-        this.getList()
-        console.log('list.....................？？？',this.state.list)
-    }
-    public getList = async () => {
-        // const { getQuestion } = this.props.question
-        // getQuestion()
-        const result = await this.props.question.getQuestion()
-        this.setState({
-            list: result
-        })
-    }
-
-    public render() {
-        // const {list} =this.state;
-        // console.log(list)
-        return (
-            <div>
-                <Table columns={columns} dataSource={data} size="middle" />
-                <h4>Small size table</h4>
-                <Table columns={columns} dataSource={data} size="small" />
-            </div>
-        )
-    }
-}
-
-export default Rank;
->>>>>>> lfs
-=======
- export default Rank;
->>>>>>> 6ebd4bb1571a63f79bfac9501e2e7659033756e6

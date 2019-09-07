@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-p{
-    text-align: left;
-=======
+
 /* p{
     text-align: left;
     padding-left:8%;
->>>>>>> lfs
 =======
 
 .ant-layout-content{
@@ -41,9 +36,9 @@ h2{
     width:100%;
     height:100%;
 }
->>>>>>> lfs
-=======
-}
+
+
+
 .addtype{
     width:90%;
     height:100%;
@@ -66,4 +61,3 @@ h2{
     background: linear-gradient(-90deg,#4e75ff,#0139fd)!important;
     margin-bottom:25px;
 }
->>>>>>> 6ebd4bb1571a63f79bfac9501e2e7659033756e6
