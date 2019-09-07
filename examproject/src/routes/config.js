@@ -3,6 +3,8 @@ import Login from "../views/login/index.tsx";
 import Rank from '../views/home/rank/index.tsx';
 import Add from '../views/home/add/index.tsx';
 import Check from '../views/home/check/index.tsx';
+import Pageadd from '../views/home/pageadd/index.tsx';
+import Show from '../views/home/show/index.tsx';
 const routes = [
     {
         component: Login,
@@ -20,6 +22,13 @@ const routes = [
             {
                 component: Check,
                 path: '/home/check',
+            },
+            {
+                component: Pageadd,
+                path: '/home/pageadd',
+            }, {
+                component: Show,
+                path: '/home/show',
             }
         ],
         component: Home,
