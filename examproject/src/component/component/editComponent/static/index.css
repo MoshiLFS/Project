@@ -12,6 +12,7 @@
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
+  border: thin solid #eee;
 }
 
 .edit_header {
@@ -20,7 +21,7 @@
   height: 44.8px;
   display: flex;
   justify-content: space-between;
-  border: thin solid #ddd;
+  border-bottom: thin solid #ddd;
 }
 
 .edit_header > ul {

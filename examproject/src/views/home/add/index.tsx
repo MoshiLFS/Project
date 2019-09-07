@@ -73,7 +73,9 @@ class Add extends React.Component<Props> {
                         </select>
                         <h3>答案信息</h3>
                         <Edit />
-                        <Button type="primary">提交</Button>
+                        <div className='ant_button'>
+                            <Button type="primary">提交</Button>
+                        </div>
                     </div>
                 </Content>
             </div>
