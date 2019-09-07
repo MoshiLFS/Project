@@ -1,0 +1,6 @@
+header.ant-layout-header{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
