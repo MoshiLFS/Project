@@ -24,7 +24,21 @@ main.ant-layout-content {
   border-radius: 10px;
 }
 
+button {
+  width: 111.84px;
+  height: 32px;
+}
+
 button.addClassRoom {
   width: 158px;
   height: 40px;
+}
+
+.goCenter {
+  display: flex;
+  align-items: Center;
+}
+
+tr {
+  background: #fff;
 }

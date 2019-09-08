@@ -66,7 +66,7 @@ class Home extends React.Component<Props> {
                                     }
                                 >
                                     <Menu.Item key="9" ><NavLink to="/home/classroom">班级管理</NavLink></Menu.Item>
-                                    <Menu.Item key="10"><NavLink to="/home/classroom">教室管理</NavLink></Menu.Item>
+                                    <Menu.Item key="10"><NavLink to="/home/classroom_management">教室管理</NavLink></Menu.Item>
                                     <Menu.Item key="11"><NavLink to="/home/studentRoom">学生管理</NavLink></Menu.Item>
                                 </SubMenu>
                             </Menu>

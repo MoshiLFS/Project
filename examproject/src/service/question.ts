@@ -19,3 +19,7 @@ export let getAllClass = () => {
 export let getAllClassName = () => {
     return request.get('/manger/grade');
 }
+//获取学生信息
+export let getAllStudent = () => {
+    return request.put('/manger/student/edit');
+}

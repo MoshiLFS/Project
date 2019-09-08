@@ -22,7 +22,8 @@ import Add from '../views/home/question_management/add';
 import Check from '../views/home/question_management/check';
 //教室管理
 import Classroom from '../views/home/classroom/classroom';
-import StudentRoom from '../views/home/classroom/student_management'
+import StudentRoom from '../views/home/classroom/student_management';
+import ClassroomManagement from '../views/home/classroom/classroom_management';
 const routes = [
     {
         component: Login,
@@ -34,7 +35,8 @@ const routes = [
             {component: Check, path: '/home/check',},
 
             {component: Classroom, path: '/home/classroom'},
-            {component: StudentRoom, path: '/home/studentRoom'}
+            {component: StudentRoom, path: '/home/studentRoom'},
+            {component: ClassroomManagement, path: '/home/classroom_management'},
         ],
         component: Home,
         path: '/home'
