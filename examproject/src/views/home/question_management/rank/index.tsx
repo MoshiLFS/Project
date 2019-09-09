@@ -1,84 +1,65 @@
 import * as React from 'react';
 import { Table } from 'antd';
+// import question from "../../../store/index";
 import "./index.css";
 
 import { inject, observer } from 'mobx-react';
 const columns = [
     {
-        title: 'Name',
+        title: '类型ID',
         dataIndex: 'name',
     },
     {
-        title: 'Age',
+        title: '类型名称',
         dataIndex: 'age',
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
+        title: '操作',
+        dataIndex: '',
     },
 ];
-const data = [
-    {
-        key: '1',
-        name: 'John Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
-    },
-    {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
-    },
-    {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-    },
-];
+const data = [];
 interface Props {
-    question: any,
+    getQuestionsType: any,
     result: any
 }
-// interface Props {
-//     path: any
-// }
 
-@inject('question')
+@inject('getQuestionsType')
 @observer
-class Rank extends React.Component<Props> {
-    // constructor(props: any) {
-    //     super(props)
-    //     this.getList()
-    // }
-    public state = {
+class Rank extends React.Component<Props>{
+     state = {
         list: []
     }
-    public componentDidMount() {
+  componentDidMount() {
         this.getList()
-        console.log('list.....................？？？',this.state.list)
     }
-    public getList = async () => {
-        // const { getQuestion } = this.props.question
-        // getQuestion()
-        const result = await this.props.question.getQuestion()
+    getList = async () => {
+        // const result = await this.props.getQuestionsType.getQuestionsType();
         this.setState({
-            list: result
+            // list: result.data
         })
     }
 
-    public render() {
-        // const {list} =this.state;
-        // console.log(list)
+   render() {
+       const {list} =this.state;
+        console.log(list)
+        const data = list.map((item:any,index)=>{
+            return{
+                name: item.questions_type_id,
+                age: item.questions_type_text
+            }
+        })
         return (
-            <div>
-                <Table columns={columns} dataSource={data} size="middle" />
-                <h4>Small size table</h4>
-                <Table columns={columns} dataSource={data} size="small" />
+            <div className="rankbox">
+                <h2>试题分类</h2>
+                <div className="add">
+                    <div className="addtype">
+                        <span>+ 添加类型</span>
+                        <Table columns={columns} dataSource={data} size="middle" />
+                    </div>
+                </div>
             </div>
         )
     }
 }
-
-export default Rank;
+ export default Rank;

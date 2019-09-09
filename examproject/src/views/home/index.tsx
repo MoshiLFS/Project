@@ -56,6 +56,21 @@ class Home extends React.Component<Props> {
                                     <Menu.Item key="6"><NavLink to="/home/rank">试题分类</NavLink></Menu.Item>
                                     <Menu.Item key="7"><NavLink to="/home/check">查看试题</NavLink></Menu.Item>
                                 </SubMenu>
+
+                                <SubMenu
+                                    key="sub2"
+                                    title={
+                                        <span>
+                                            <Icon type="appstore" />
+                                            <span>添加用户</span>
+                                        </span>
+                                    }
+                                >
+                                    <Menu.Item key="12" ><NavLink to="/home/pageadd">添加用户</NavLink></Menu.Item>
+                                    <Menu.Item key="13"><NavLink to="/home/show">用户展示</NavLink></Menu.Item>
+                                </SubMenu>
+
+
                                 <SubMenu
                                     key="sub2"
                                     title={

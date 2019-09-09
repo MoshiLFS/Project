@@ -84,9 +84,9 @@ class Add extends React.Component<Props> {
     }
     componentDidMount() {
         this.props.form.validateFields();
-        addQuestion('/exam/questions').then(res => {
-            console.log(res);
-        })
+        // addQuestion('/exam/questions').then((res: any) => {
+        //     console.log(res);
+        // })
     }
 }
 

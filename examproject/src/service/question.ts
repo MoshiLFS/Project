@@ -1,25 +1,23 @@
 import request from '../utils/request';
 
 // 获取试题
-export let getQuestion = (params: object) => {
-    console.log(params)//undefined
-    return request.get('/exam/questions/condition', { params });
+export let getQuestion = () => {
+    return request.get('/exam/questions/new');
 }
 
-//添加试题
-export let addQuestion = (params: any) => {
-    return request.get('/exam/questions/new', { params });
-}
-
-//获取全部教室号
 export let getAllClass = () => {
-    return request.get('/manger/room');
+    return request.post('/manger/grade');
 }
-//获取全部班级名
+
+export let addQuestion = () => {
+    return request.get('/exam/questions');
+}
+
 export let getAllClassName = () => {
-    return request.get('/manger/grade');
+    return request.post('/manger/room');
 }
-//获取学生信息
+
 export let getAllStudent = () => {
     return request.put('/manger/student/edit');
 }
+
