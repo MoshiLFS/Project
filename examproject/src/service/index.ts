@@ -5,3 +5,5 @@ export * from './getQuestionsType';
 export * from './adduser';
 //用户展示;
 export * from './showdata';
+//阅卷管理
+export * from './special';
