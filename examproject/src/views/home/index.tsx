@@ -74,16 +74,11 @@ class Home extends React.Component<Props> {
                                     title={
                                         <span>
                                             <Icon type="appstore" />
-                                            <span>Navigation Three</span>
+                                            <span>阅卷管理</span>
                                         </span>
                                     }
                                 >
-                                    <Menu.Item key="9">Option 13</Menu.Item>
-                                    <Menu.Item key="10">Option 14</Menu.Item>
-                                    <SubMenu key="sub3" title="Submenu">
-                                        <Menu.Item key="11">Option 15</Menu.Item>
-                                        <Menu.Item key="12">Option 16</Menu.Item>
-                                    </SubMenu>
+                                    <Menu.Item key="9"><NavLink to="/home/special">特批班级</NavLink></Menu.Item>
                                 </SubMenu>
                             </Menu>
                         </div>
