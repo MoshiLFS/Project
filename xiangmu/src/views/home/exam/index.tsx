@@ -38,12 +38,8 @@ export default class Addexam extends React.Component<Props> {
                 label: '周考三',
             },
             {
-                value: '周考四',
-                label: '周考四',
-            },
-            {
-                value: '周考五',
-                label: '周考五',
+                value: '月考',
+                label: '月考',
             },
         ];
         function onChange(value: any) {
@@ -66,6 +62,25 @@ export default class Addexam extends React.Component<Props> {
             {
                 value: '移动端开发',
                 label: '移动端开发',
+            },{
+                value: 'node高级',
+                label: 'node高级',
+            },
+            {
+                value: '渐进式开发',
+                label: '渐进式开发',
+            },
+            {
+                value: '项目实战',
+                label: '项目实战',
+            },
+            {
+                value: 'node基础',
+                label: 'node基础',
+            },
+            {
+                value: 'javascript高级',
+                label: 'javascript高级',
             },
         ];
         function onChange1(value: any) {
@@ -102,7 +117,7 @@ export default class Addexam extends React.Component<Props> {
                             </div>
                         </div>
                         <div>
-                            <Button type="primary" className='one0'>Primary</Button>
+                            <Button type="primary" className='one0'>创建试卷</Button>
                         </div>
                     </div>
                 </div>
