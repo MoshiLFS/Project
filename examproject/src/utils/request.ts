@@ -11,7 +11,10 @@ const instance = axios.create({
     headers: { 'authorization': getToken() }
     // headers: {'X-Custom-Header': 'foobar'}
 });
+<<<<<<< HEAD
 // console.log(getToken())
+=======
+>>>>>>> lfs
 // 请求拦截器
 instance.interceptors.request.use((config) => {
     // Do something before request is sent

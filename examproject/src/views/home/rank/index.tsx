@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { Table } from 'antd';
+<<<<<<< HEAD
 
 import { DndProvider, DragSource, DropTarget } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
+=======
+// import question from "../../../store/index";
+>>>>>>> lfs
 import "./index.css";
 
 // import { inject, observer } from 'mobx-react';
@@ -65,4 +69,8 @@ class Rank extends React.Component<Props>{
         )
     }
 }
+<<<<<<< HEAD
 export default Rank;
+=======
+ export default Rank;
+>>>>>>> lfs

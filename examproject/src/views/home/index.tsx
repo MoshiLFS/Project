@@ -1,24 +1,47 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import { Menu, Icon, Button, Layout, Switch,Table, Avatar} from 'antd';
 import { NavLink} from 'react-router-dom';
 import Routerview from "../../routes/routerview";
 
+=======
+import { Button,Table} from 'antd';
+>>>>>>> lfs
 import "./index.css";
-const { SubMenu } = Menu;
+import { inject, observer } from 'mobx-react';
 
-
-const { Header, Content, Sider } = Layout;
-
-interface Props{
-    path:any
+const data = [];
+const columns = [
+    {
+        title: '用户名',
+        dataIndex: 'name',
+    },
+    {
+        title: '密码',
+        dataIndex: 'age',
+    },
+    {
+        title: '身份',
+        dataIndex: 'address',
+    },
+];
+interface Props {
+    showdata: any,
+    result: any
 }
-
-class Home extends React.Component<Props> {
+@inject('showdata')
+@observer
+class Show extends React.Component<Props> {
     state = {
-    collapsed: false
-};   
-  toggleCollapsed = () => {
+        list: []
+    }
+    componentDidMount() {
+        this.getList()
+    }
+    getList = async () => {
+        const result = await this.props.showdata.showdata();
         this.setState({
+<<<<<<< HEAD
             collapsed: !this.state.collapsed,
         });
     };
@@ -89,16 +112,57 @@ class Home extends React.Component<Props> {
                                     </SubMenu>
                                 </SubMenu>
                             </Menu>
+=======
+            list: result.data
+        })
+    }
+    render() {
+        const { list } = this.state;
+        console.log(list)
+        const data = list.map((item: any, index) => {
+            return {
+                name: item.user_name,
+                age: item.user_pwd,
+                address: item.identity_text
+            }
+        })
+        return ( 
+                <div className="showbox">
+                    <h2>用户展示</h2>
+                    <div className="uls">
+                        <ul className="ul">
+                            <Button type="primary" ghost>
+                                用户数据
+                        </Button>
+                            <Button >
+                                身份数据
+                        </Button>
+                            <Button>
+                                api接口权限
+                        </Button>
+                            <Button>
+                                身份和api接口关系
+                        </Button>
+                            <Button>
+                                视图接口权限
+                        </Button>
+                            <Button>
+                                身份和视图权限关系
+                        </Button>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>用户数据</h2>
+                        <div className="userbox">
+                            <div className="tabbox">
+                                <Table columns={columns} dataSource={data} size="middle" />
+                            </div>
+>>>>>>> lfs
                         </div>
-                        </Sider>
-                        <Content>
-                            <Routerview routes={this.props.path}></Routerview>
-                        </Content>
-                    </Layout>
-                </Layout>
-           
+                    </div>
+                </div>
         );
     }
 }
 
-export default Home;
+export default Show;

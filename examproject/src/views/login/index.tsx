@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { WrappedFormUtils } from "antd/lib/form/Form";
 import { History } from "history/index";
+<<<<<<< HEAD
 import { setToken } from "../../utils/index";
 import "./index.css";
 import { inject, observer } from 'mobx-react';
@@ -9,6 +10,15 @@ import { inject, observer } from 'mobx-react';
 interface Props {
     form: WrappedFormUtils,
     user: any,
+=======
+import "./index.css";
+import { inject, observer } from 'mobx-react';
+import "./index.css";
+
+interface Props {
+    form: WrappedFormUtils,
+    user: any, 
+>>>>>>> lfs
     history: History,
 }
 
@@ -95,7 +105,10 @@ class Login extends React.Component<Props> {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>记住密码</Checkbox>)}
+<<<<<<< HEAD
                    
+=======
+>>>>>>> lfs
                 </Form.Item>
                 <Form.Item>
                     {getFieldDecorator('autoLogin', {
@@ -114,6 +127,10 @@ class Login extends React.Component<Props> {
         );
     }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> lfs
 }
 
 export default Form.create()(Login);

@@ -26,5 +26,10 @@ html,body{
 }
 
 .imgs img{
+<<<<<<< HEAD
     width:120px;
+=======
+    width:300px;
+    height: 40px;
+>>>>>>> lfs
 }

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 /* p{
     text-align: left;
     padding-left:8%;
 =======
+=======
+>>>>>>> lfs
 
 .ant-layout-content{
     width:100%;
@@ -60,4 +63,8 @@ h2{
     color: #fff!important;
     background: linear-gradient(-90deg,#4e75ff,#0139fd)!important;
     margin-bottom:25px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> lfs

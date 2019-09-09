@@ -1,12 +1,11 @@
 import * as React from 'react';
-<<<<<<< HEAD
 import { Form, Icon, Input, Button, Layout } from 'antd';
-import Edit from '../../../component/component/editComponent'
+import Edit from '../../../../component/component/editComponent'
 import './index.css';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-import { addQuestion } from '../../../service/question'
+import { addQuestion } from '../../../../service/question'
 
 interface Props {
     form: any,
@@ -92,21 +91,3 @@ class Add extends React.Component<Props> {
 }
 
 export default Form.create()(Add);
-=======
-
-class Add extends React.Component {
-    constructor(props:any) {
-        super(props);
-        this.state = {  };
-    }
-    render() {
-        return (
-            <div>
-                ADDssss
-            </div>
-        );
-    }
-}
-
-export default Add;
->>>>>>> lfs

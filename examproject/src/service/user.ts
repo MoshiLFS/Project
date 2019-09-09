@@ -5,4 +5,7 @@ export let login = (params: object) => {
     console.log(params,'params.........................')
     return request.post('/user/login', params);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> lfs
