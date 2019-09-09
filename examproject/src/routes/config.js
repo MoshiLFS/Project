@@ -9,6 +9,9 @@ import Check from '../views/home/question_management/check';
 import Classroom from '../views/home/classroom/classroom';
 import StudentRoom from '../views/home/classroom/student_management';
 import ClassroomManagement from '../views/home/classroom/classroom_management';
+// import Pageadd from '../views/home/pageadd/index.tsx';
+// import Show from '../views/home/show/index.tsx';
+// import Special from '../views/home/special/index.tsx';
 const routes = [
     {
         component: Login,
@@ -22,6 +25,10 @@ const routes = [
             {component: Classroom, path: '/home/classroom'},
             {component: StudentRoom, path: '/home/studentRoom'},
             {component: ClassroomManagement, path: '/home/classroom_management'},
+
+            // {component: Pageadd, path: '/home/pageadd'},
+            // {component: Show, path: '/home/show'},
+            // {component: Special, path: '/home/special'},
         ],
         component: Home,
         path: '/home'
