@@ -24,8 +24,6 @@ import Check from '../views/home/question_management/check';
 import Classroom from '../views/home/classroom/classroom';
 import StudentRoom from '../views/home/classroom/student_management';
 import ClassroomManagement from '../views/home/classroom/classroom_management';
-import Pageadd from '../views/home/pageadd/index.tsx';
-import Show from '../views/home/show/index.tsx';
 const routes = [
     {
         component: Login,
@@ -35,14 +33,16 @@ const routes = [
             {component: Add,path: '/home/add',},
             {component: Rank,path: '/home/rank',},
             {component: Check, path: '/home/check',},
+
             {component: Classroom, path: '/home/classroom'},
             {component: StudentRoom, path: '/home/studentRoom'},
-            {component: Pageadd,  path: '/home/pageadd'},
-            {component: Show, path: '/home/show'},
             {component: ClassroomManagement, path: '/home/classroom_management'},
         ],
         component: Home,
         path: '/home'
+    },
+    {
+        path: '/', redirect: '/login'
     }
 ]
 export default routes;
