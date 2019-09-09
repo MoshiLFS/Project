@@ -1,0 +1,8 @@
+header.ant-layout-header{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgs>img{width:120px;height:28.2px;}
