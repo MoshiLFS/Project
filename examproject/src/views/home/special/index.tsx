@@ -1,4 +1,5 @@
 import * as React from 'react';
+import "./index.css";
 
 class Special extends React.Component {
     // constructor(props) {
@@ -7,9 +8,14 @@ class Special extends React.Component {
     // }
     render() {
         return (
-            <>
-                Special
-            </>
+            <div className="specialwrap">
+                <h2>特批班级</h2>
+                <div className="specialbox">
+                    <div className="bbox">
+
+                    </div>
+                </div>
+            </div>
         );
     }
 }
