@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Menu, Icon, Button, Layout, Switch,Table, Avatar} from 'antd';
 import { NavLink} from 'react-router-dom';
 import Routerview from "../../routes/routerview";
+import routers from '../../routes/config'
 
 import "./index.css";
 const { SubMenu } = Menu;
@@ -23,6 +24,7 @@ class Home extends React.Component<Props> {
         });
     };
     public render() {
+        console.log('routers.....................',routers)
         return (
            
                 <Layout>
@@ -56,52 +58,11 @@ class Home extends React.Component<Props> {
                                     <Menu.Item key="6"><NavLink to="/home/rank">试题分类</NavLink></Menu.Item>
                                     <Menu.Item key="7"><NavLink to="/home/check">查看试题</NavLink></Menu.Item>
                                 </SubMenu>
-
-                                <SubMenu
-                                    key="sub2"
-                                    title={
-                                        <span>
-                                            <Icon type="appstore" />
-                                            <span>添加用户</span>
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="12" ><NavLink to="/home/pageadd">添加用户</NavLink></Menu.Item>
-                                    <Menu.Item key="13"><NavLink to="/home/show">用户展示</NavLink></Menu.Item>
-                                </SubMenu>
-
-                                <SubMenu
-                                    key="sub3"
-                                    title={
-                                        <span>
-                                            <Icon type="appstore" />
-                                            <span>考试管理</span>
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="14" ><NavLink to="/home/exam">添加用户</NavLink></Menu.Item>
-                                    <Menu.Item key="15"><NavLink to="/home/list">用户展示</NavLink></Menu.Item>
-                                </SubMenu>
-
-
-                                <SubMenu
-                                    key="sub4"
-                                    title={
-                                        <span>
-                                            <Icon type="appstore" />
-                                            <span>班级管理</span>
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="9" ><NavLink to="/home/classroom">班级管理</NavLink></Menu.Item>
-                                    <Menu.Item key="10"><NavLink to="/home/classroom_management">教室管理</NavLink></Menu.Item>
-                                    <Menu.Item key="11"><NavLink to="/home/studentRoom">学生管理</NavLink></Menu.Item>
-                                </SubMenu>
                             </Menu>
                         </div>
                         </Sider>
                         <Content>
-                            <Routerview routes={this.props.path}></Routerview>
+                            <Routerview routes={this.props.children}></Routerview>
                         </Content>
                     </Layout>
                 </Layout>

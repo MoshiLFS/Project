@@ -18,31 +18,47 @@ import AddkaoshiList from '../views/home/examination_management/list'
 
 const routes = [
     {
-        component: Login,
-        path: '/login'
-    }, {
-        children: [
-            {component: Add,path: '/home/add',},
-            {component: Rank,path: '/home/rank',},
-            {component: Check, path: '/home/check',},
-            
-            {component: Pageadd, path: '/home/pageadd'},
-            {component: Show, path: '/home/show'},
-
-            {component: Addkaoshi, path: '/home/exam'},
-            {component: AddkaoshiList, path: '/home/list'},
-
-            {component: Classroom, path: '/home/classroom'},
-            {component: StudentRoom, path: '/home/studentRoom'},
-            {component: ClassroomManagement, path: '/home/classroom_management'},
-
-            // {component: Special, path: '/home/special'},
-        ],
+        path: '/home',
         component: Home,
-        path: '/home'
+        children: [
+            {
+                title: '试题管理',
+                children: [
+                    {component: Add,path: '/home/add', title: '添加试题'},
+                    {component: Rank,path: '/home/rank', title: '试题分类'},
+                    {component: Check, path: '/home/check', title: '查看试题'},
+                ]
+            },
+            {
+                title: '添加用户',
+                children: [
+                    {component: Pageadd, path: '/home/pageadd', title: '添加用户'},
+                    {component: Show, path: '/home/show', title: '用户展示'},
+                ]
+            },
+            {
+                title: '考试管理',
+                children: [
+                    {component: Addkaoshi, path: '/home/exam', title: '添加考试'},
+                    {component: AddkaoshiList, path: '/home/list', title: '试卷列表'},
+                ]
+            },
+            {
+                title: '班级管理',
+                children:[
+                    {component: Classroom, path: '/home/classroom', title: '班级管理'},
+                    {component: StudentRoom, path: '/home/studentRoom', title: '教室管理'},
+                    {component: ClassroomManagement, path: '/home/classroom_management',title: '学生管理'},
+                ]
+            },
+            {
+                path:'/home', redirecr: '/home/add',
+            }
+        ]
     },
     {
-        path: '/', redirect: '/login'
-    }
+        path: '/login', component: Login,
+    },
+    { path: '/', redirect: '/login' }
 ]
 export default routes;
