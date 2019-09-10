@@ -13,7 +13,7 @@ export default class Routerview extends Component {
             <Switch>
                 {
                     routeArr && routeArr.map((item,index)=><Route key={index} path={item.path } render={(props)=>{
-                        console.log('item.................',item)
+                        // console.log('item.................',item)
                         if(item.component){
                            return <item.component {...props} children={item.children}/>;
                         }

@@ -11,20 +11,20 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 interface Props{
-    path:any
+    path:any,
 }
 
 class Home extends React.Component<Props> {
     state = {
-    collapsed: false
-};   
+        collapsed: false,  routers: routers[0].children
+    };   
   toggleCollapsed = () => {
         this.setState({
             collapsed: !this.state.collapsed,
         });
     };
     public render() {
-        console.log('routers.....................',routers)
+        console.log('routers..................111111111111111111...',this.props)
         return (
            
                 <Layout>
@@ -45,19 +45,37 @@ class Home extends React.Component<Props> {
                                 theme="dark"
                                 inlineCollapsed={this.state.collapsed}
                             >
-                                <SubMenu
-                                    key="sub1"
-                                    title={
-                                        <span>
-                                            <Icon type="mail" />
-                                            <span>试题管理</span>
-                                        </span>
-                                    }
-                                >
-                                    <Menu.Item key="5"><NavLink to="/home/add">添加试题</NavLink></Menu.Item>
-                                    <Menu.Item key="6"><NavLink to="/home/rank">试题分类</NavLink></Menu.Item>
-                                    <Menu.Item key="7"><NavLink to="/home/check">查看试题</NavLink></Menu.Item>
-                                </SubMenu>
+                                {
+                                    this.state.routers && this.state.routers.map((item: any,index: any)=>{
+                                       return item.title ? <SubMenu
+                                       key={index}
+                                       title={
+                                           <span>
+                                               <Icon type="mail" />
+                                               <span>{item.title}</span>
+                                           </span>
+                                       }
+                                   >
+                                       {/* <Menu.Item ><NavLink to="/home/add">添加试题</NavLink></Menu.Item> */}
+                                     {
+                                        //  item.children ? item.children.filter() : null
+                                        // console.log(item.children,'..................')
+                                        // item.children.map((item1:any)=>{
+                                        //     console.log(item1)
+                                        // })
+                                        // <Menu.Item ><NavLink to="/home/add">添加试题</NavLink></Menu.Item>
+                                        
+                                       
+                                        item.children.map((item:any)=>{ 
+                                            return <Menu.Item ><NavLink to={item.path}>{item.title}</NavLink></Menu.Item>
+                                        }) 
+                                      
+                                     }
+                                       
+                                   </SubMenu> : null
+                                    })
+                                }
+                                
                             </Menu>
                         </div>
                         </Sider>
