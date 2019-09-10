@@ -16,6 +16,9 @@ import Show from '../views/home/user_management/show';
 import Addkaoshi from '../views/home/examination_management/exam'
 import AddkaoshiList from '../views/home/examination_management/list'
 
+//阅卷管理
+import Special_class from '../views/home/special'
+
 const routes = [
     {
         path: '/home',
@@ -49,6 +52,12 @@ const routes = [
                     {component: Classroom, path: '/home/classroom', title: '班级管理'},
                     {component: StudentRoom, path: '/home/studentRoom', title: '教室管理'},
                     {component: ClassroomManagement, path: '/home/classroom_management',title: '学生管理'},
+                ]
+            },
+            {
+                title: '阅卷管理',
+                children:[
+                    {component: ClassroomManagement, path: '/home/special_class',title: '特批班级'},
                 ]
             },
             {

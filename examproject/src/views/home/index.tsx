@@ -80,6 +80,9 @@ class Home extends React.Component<Props> {
                         </div>
                         </Sider>
                         <Content>
+                            {
+                                console.log('this.props.children==================',this.props.children)
+                            }
                             <Routerview routes={this.props.children}></Routerview>
                         </Content>
                     </Layout>
