@@ -66,7 +66,7 @@ class Home extends React.Component<Props> {
                                         // <Menu.Item ><NavLink to="/home/add">添加试题</NavLink></Menu.Item>
                                         
                                        
-                                        item.children.map((item:any)=>{ 
+                                        item.children.map((item:any, index: any)=>{ 
                                             return <Menu.Item ><NavLink to={item.path}>{item.title}</NavLink></Menu.Item>
                                         }) 
                                       
