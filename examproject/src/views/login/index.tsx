@@ -2,13 +2,12 @@ import * as React from 'react';
 import { Form, Icon, Input, Button, Checkbox, message } from 'antd';
 import { WrappedFormUtils } from "antd/lib/form/Form";
 import { History } from "history/index";
-import { setToken } from "../../utils/index";
 import "./index.css";
-import { inject,observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 
 interface Props {
     form: WrappedFormUtils,
-    user: any, 
+    user: any,
     history: History,
 }
 
@@ -16,18 +15,18 @@ interface Props {
 @observer
 class Login extends React.Component<Props> {
 
-    handleSubmit = (e:React.FormEvent) => {
+    handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        this.props.form.validateFields(async(err, values) => {
+        this.props.form.validateFields(async (err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                const {code,msg}=await this.props.user.login(values);
+                const { code, msg } = await this.props.user.login(values);
                 // console.log(code, msg)//Chenmanjie123!
                 //跳转路由
-                if(code===1){
-                    // setToken('key','authorization')
-                    this.props.history.push('/home');
-                }else{
+                if (code === 1) {
+                    console.log('111')
+                    this.props.history.push('/home/add');
+                } else {
                     message.error(msg || '用户名或密码错误');
                 }
             }
@@ -95,24 +94,25 @@ class Login extends React.Component<Props> {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>记住密码</Checkbox>)}
+                   
                 </Form.Item>
                 <Form.Item>
                     {getFieldDecorator('autoLogin', {
                         valuePropName: 'checked',
                         initialValue: true,
-                    })(<Checkbox>Auto login in 7 days</Checkbox>)}
+                    })(<Checkbox>记住密码</Checkbox>)}
                     <a className="login-form-forgot" href="">
                         忘记密码
-          </a>
+                    </a>
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         登录
-          </Button>
+                    </Button>
                     <a href="">去注册!</a>
                 </Form.Item>
             </Form>
         );
     }
-    
+
 }
 
 export default Form.create()(Login);

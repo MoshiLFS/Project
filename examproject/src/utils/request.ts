@@ -6,12 +6,12 @@ import { message } from 'antd'
 
 
 const instance = axios.create({
-    baseURL: 'http://169.254.32.138:7001',
+    baseURL: 'http://localhost:7001',
     timeout: 1000,
     headers: { 'authorization': getToken() }
     // headers: {'X-Custom-Header': 'foobar'}
 });
-// console.log(getToken())
+
 // 请求拦截器
 instance.interceptors.request.use((config) => {
     // Do something before request is sent

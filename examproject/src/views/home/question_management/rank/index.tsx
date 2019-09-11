@@ -34,9 +34,9 @@ class Rank extends React.Component<Props>{
         this.getList()
     }
     getList = async () => {
-        const result = await this.props.getQuestionsType.getQuestionsType();
+        // const result = await this.props.getQuestionsType.getQuestionsType();
         this.setState({
-            list: result.data
+            // list: result.data
         })
     }
 

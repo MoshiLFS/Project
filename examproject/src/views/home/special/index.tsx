@@ -38,9 +38,9 @@ const columns = [
         dataIndex: 'action1',
     }
 ];
-function showTotal(total:any) {
-    return `Total ${total} items`;
-}
+// function showTotal(total:any) {
+//     return `Total ${total} items`;
+// }
 
 interface Props {
     special: any,
@@ -82,7 +82,7 @@ class Special extends React.Component<Props> {
                         <Table columns={columns} dataSource={data} />
                         <div>
                             {/* <Pagination size="small" total={50} /> */}
-                            <Pagination size="small" total={50} showSizeChanger showQuickJumper />
+                            {/* <Pagination size="small" total={50} showSizeChanger showQuickJumper /> */}
                             {/* <Pagination size="small" total={50} showTotal={showTotal} /> */}
                         </div>
                     </div>

@@ -52,6 +52,7 @@ class Check extends React.Component<Props>{
                 <div className="top">
                     查看试题
                 </div>
+                <div className="center">
                 <div className="content">
                     <div className="classtype">
                         <ul>
@@ -114,6 +115,7 @@ class Check extends React.Component<Props>{
                             查询
                         </Button>
                     </div>
+                </div>
                 </div>
                 <div className="bottom">
                    {

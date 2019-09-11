@@ -26,7 +26,22 @@ interface Props {
 @observer
 class Show extends React.Component<Props> {
     state = {
-        list: []
+        list: [],
+        dataarr:[
+            {
+                title:"用户数据"
+            }, {
+                title: "身份数据"
+            }, {
+                title: "api接口权限"
+            }, {
+                title: "身份和api接口关系"
+            }, {
+                title: "视图接口权限"
+            }, {
+                title: "身份和视图权限关系"
+            }
+        ]
     }
     componentDidMount() {
         this.getList()
@@ -37,9 +52,12 @@ class Show extends React.Component<Props> {
             list: result.data
         })
     }
+    btn(){
+        console.log(11)
+    }
     render() {
-        const { list } = this.state;
-        console.log(list)
+        const { list,dataarr } = this.state;
+        console.log(dataarr)
         const data = list.map((item: any, index) => {
             return {
                 name: item.user_name,
@@ -52,7 +70,14 @@ class Show extends React.Component<Props> {
                     <h2>用户展示</h2>
                     <div className="uls">
                         <ul className="ul">
-                            <Button type="primary" ghost>
+                        {
+                            dataarr && dataarr.map(item=>{
+                                return <Button type="primary" ghost onClick={this.btn.bind(this)}>
+                                    {item.title}
+                        </Button>
+                            })
+                        }
+                            {/* <Button type="primary" ghost>
                                 用户数据
                         </Button>
                             <Button >
@@ -69,7 +94,7 @@ class Show extends React.Component<Props> {
                         </Button>
                             <Button>
                                 身份和视图权限关系
-                        </Button>
+                        </Button> */}
                         </ul>
                     </div>
                     <div>
