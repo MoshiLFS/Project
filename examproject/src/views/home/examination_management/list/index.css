@@ -21,10 +21,6 @@
     flex: 2;
     
   }
-  button.ant-btn{
-      width: 70px;
-      height: 30px;
-  }
   .m-tag-item .ant-tag{
     margin:0;
     padding:5px 10px;

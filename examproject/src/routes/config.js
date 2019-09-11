@@ -27,8 +27,8 @@ const routes = [
             {
                 title: '试题管理',
                 children: [
-                    {component: Add,path: '/home/add', title: '添加试题'},
-                    {component: Rank,path: '/home/rank', title: '试题分类'},
+                    {component: Add, path: '/home/add', title: '添加试题'},
+                    {component: Rank, path: '/home/rank', title: '试题分类'},
                     {component: Check, path: '/home/check', title: '查看试题'},
                 ]
             },
@@ -57,7 +57,7 @@ const routes = [
             {
                 title: '阅卷管理',
                 children:[
-                    {component: ClassroomManagement, path: '/home/special_class',title: '特批班级'},
+                    {component: Special_class, path: '/home/special_class',title: '特批班级'},
                 ]
             },
             {

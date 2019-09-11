@@ -6,3 +6,5 @@ header.ant-layout-header{
 }
 
 .imgs>img{width:120px;height:28.2px;}
+div.ant-table-content {width:100%;}
+button.ant-btn-primary{width:200px;}

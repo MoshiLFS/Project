@@ -101,8 +101,8 @@ export default class Addexam extends React.Component<Props> {
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <Button type="primary" className='one0'>Primary</Button>
+                        <div className='paddingButton'>
+                            <Button type="primary" className="ant-btn addClassRoom ant-btn-primary">Primary</Button>
                         </div>
                     </div>
                 </div>

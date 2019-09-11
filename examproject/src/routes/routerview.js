@@ -6,8 +6,9 @@ export default class Routerview extends Component {
     render() {
         const { routes } = this.props;
         let routeArr = routes.filter(item=> !item.redirect) ;
-        let redirectArr = routes.filter(item=> item.redirect).map((item,index)=> 
-            <Redirect form={item.path} key={index} to={item.redirect}/>)
+        let redirectArr = routes.filter(item=> item.redirect).map((item,index)=>
+            routes.filter(item=> item.redirect).length>0 ? <Redirect form={item.path} key={index} to={item.redirect}/> : null)
+            console.log('redirectArr.............',redirectArr)
         return (
             <Switch>
                 {

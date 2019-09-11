@@ -11,4 +11,4 @@ select{width:200px;height: 32px;border:thin solid #eee;}
 .center{padding:24px 0 24px 0;flex:1;}
 form.ant-form-inline{padding-bottom:38px;}
 .ant_button{padding:40px 0 20px 0;}
-button.ant-btn{background:-webkit-linear-gradient(right,#4e75ff, #0139fd)!important;padding: 3px 30px;}
+/* button.ant-btn{background:-webkit-linear-gradient(right,#4e75ff, #0139fd)!important;padding: 3px 30px;} */

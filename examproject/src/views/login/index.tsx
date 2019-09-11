@@ -25,7 +25,7 @@ class Login extends React.Component<Props> {
                 //跳转路由
                 if (code === 1) {
                     console.log('111')
-                    this.props.history.push('/home');
+                    this.props.history.push('/home/add');
                 } else {
                     message.error(msg || '用户名或密码错误');
                 }
