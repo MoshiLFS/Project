@@ -7,3 +7,5 @@ export * from './adduser';
 export * from './showdata';
 //阅卷管理
 export * from './special';
+//添加试题类型;
+export * from './addtype'
