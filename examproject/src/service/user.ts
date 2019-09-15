@@ -1,8 +1,16 @@
 import request from '../utils/request';
 
-// 登陆
-export let login = (params: object) => {
-    // console.log(params)
-    return request.post('/user/login', params);
+export let login = (params:object)=>{
+    return request.post('/user/login',params)
 }
 
+//获取用户信息
+
+export let getUserInfo = ()=>{
+  return request.get('/user/userInfo')
+}
+
+//用户权限
+export let getViewAuthority = ()=>{
+  return request.get('/user/view_authority');
+}

@@ -1,0 +1,41 @@
+.testclass{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    background: #F0F2F5;
+    /* background: #000; */
+}
+.testclass>.header{
+    width: 100%;
+    height: 70px;
+}
+.testclass>.header>h2{
+    width: 90%;
+    height: 100%;
+    line-height: 70px;
+
+}
+.testclass>.section{
+    width: 100%;
+    height: 472px;
+    background: #fff;
+    border-radius: 10px;
+}
+.testclass>.section>.btns{
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.testclass>.section>.ant-table-wrapper{
+    width: 95%;
+    height: 404px;
+    margin-top: 20px;
+    overflow: auto;
+}
+.inp{
+    width: 80%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}

@@ -9,11 +9,8 @@
     ]
   },
   "rules": {
-    "interface-name": [
-      true,
-      "never-prefix"
-    ],
-    "noconsole":false,
+    "interface-name": [true, "never-prefix"],
+    "no-console": false,
     "jsx-self-close": false,
     "jsx-no-lambda": false,
     "object-literal-sort-keys": false,
@@ -21,8 +18,8 @@
     "ordered-imports": [
       false,
       {
-        "import-sources-order": "lowercase-last",
-        "named-imports-order": "lowercase-first"
+          "import-sources-order": "lowercase-last",
+          "named-imports-order": "lowercase-first"
       }
     ]
   }

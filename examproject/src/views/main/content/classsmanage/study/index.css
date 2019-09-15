@@ -1,0 +1,25 @@
+.study{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.study>h2{
+    width: 95%;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+
+}
+.study>.ant-table-wrapper{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+.study>nav{
+    width: 95%;
+    height: 70px;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+.classes{
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+    background: #F0F2F5;
+}
+.classes>h2{
+    width: 95%;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+}
+.classes_zi{
+    width: 95%;
+    height: 530px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    /* background: deeppink; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.classes_zizi{
+    width: 95%;
+    height: 509px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    
+}
+.classes_ziz>.btns{
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+}
+.classes_ziz>.btn>.ant_btn{
+    margin-top: 15px;
+}
+.classes_ziz>.btn>.ant_btn{
+    margin-top: 15px;
+}
+.ant-table-wrapper{
+    width: 100%;
+    height: 396px;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: auto;
+}
